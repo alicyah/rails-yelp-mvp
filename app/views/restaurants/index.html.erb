@@ -1,0 +1,11 @@
+<h1>Restaurants</h1>
+
+<ul class="list-unstyled text-center">
+  <% @restaurants.each do |restaurant| %>
+    <li><%= link_to restaurant.name, restaurant_path(restaurant) %> (<%= restaurant.category %>) | <%= restaurant.address %></li>
+  <% end %>
+</ul>
+
+<p class="text-center">
+  <%= link_to "Add a restaurant", new_restaurant_path, class: "btn btn-info" %>
+</p>
